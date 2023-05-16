@@ -2,7 +2,6 @@
 
 options(timeout = max(3000000000, getOption("timeout")))
 
-lst.url <- read.table(here::here('data/raw-data/envidatS3paths.txt'))
 lst.indic <- c('bio01d', 'bio04d', 'bio12d', 'bio15d','cdd', 'fd','gdd5','prsd', 'scd', 'swe') # pas 2019, 2020 pour prsd
 lst.yrs <- c(2010:2020)
 

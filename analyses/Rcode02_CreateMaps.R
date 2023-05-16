@@ -22,7 +22,7 @@ for (l in lst.indic) {
     nlat = dim(lat)
    
     # get info on variable
-    v <-  names(ncin$var)[3]
+    v <-  names(ncin$var)[length(ncin$var)]
     dlname <- ncdf4::ncatt_get(ncin,v, "long_name")
     dunits <- ncdf4::ncatt_get(ncin,v,"units")
     fillvalue <- ncdf4::ncatt_get(ncin,v,"_FillValue")
