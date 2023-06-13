@@ -1,5 +1,6 @@
 lst.indic <- c('bio01d', 'bio04d', 'bio12d', 'bio15d','cdd', 'fd','gdd5','prsd', 'scd', 'swe') # pas 2019, 2020 pour prsd
 
+#### REMOVE bio15d 2020 before running this script ####
 
 for (l in lst.indic) {
   
@@ -8,7 +9,6 @@ for (l in lst.indic) {
   lst.year <- c()
   
   for (f in ffiles) {
-    
   r <- terra::rast(here::here(paste0('data/derived-data/', l, '/',f)))
   r.stack <- c(r.stack, r)
   lb <- strsplit(f, '_')
